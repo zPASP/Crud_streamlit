@@ -11,6 +11,7 @@ if page_cliente == "Consultar":
     PageListCliente.List()
 
 if page_cliente ==  "Incluir":
+    st.experimental_set_query_params()
     PageCreateCliente.Create()
 
 
