@@ -11,7 +11,7 @@ def List():
         col.write(campo_nome)
     
     for item in ClienteController.selecionarTodos():
-        col1, col2, col3, col4, col5, col6 = st.columns((1, 2, 1, 2, 1, 1))
+        col1, col2, col3, col4, col5, col6 = st.columns((1, 2, 1, 2, 1.3, 1))
         col1.write(item.id)
         col2.write(item.nome)
         col3.write(item.idade)
@@ -23,6 +23,7 @@ def List():
 
         if on_click_excluir:
             ClienteController.Excluir(item.id)
+            button_space_excluir.button('Excluido', 'btnExcluido' + str(item.id))
 
 
 
